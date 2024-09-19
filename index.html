@@ -19,7 +19,15 @@
     playGame('scissors');
   " class="scissors-btn">✌️</button>
 
-  <p class="js-score-update score-update"></p>
+  <p class="js-score-update score-update">You paper - rock Computer</p>
+
+  <p class="js-show-score show-score">Wins: 1, Losses: 0, Ties: 0</p>
+
+  <button onclick="
+    score.wins = 0,
+    score.losses = 0,
+    score.ties = 0
+  " class="reset-btn">Reset Button</button>
 
   <script src="scripts/scripts.js"></script>
 </body>

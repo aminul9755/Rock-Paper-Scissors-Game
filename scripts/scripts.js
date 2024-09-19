@@ -1,3 +1,9 @@
+score = {
+  wins: 0,
+  losses: 0,
+  ties: 0
+}
+
 function playGame (playerMove) {
   let computerMove = createComputerMove();
   let result = '';
@@ -26,7 +32,18 @@ function playGame (playerMove) {
       result = 'Tie.';
     }
   }
+
+  if (result === 'You win.') {
+    score.wins += 1;
+  } else if (result === 'You lose.') {
+    score.losses += 1;
+  } else if (result === 'Tie.') {
+    score.ties += 1;
+  }
+
   document.querySelector('.js-score-update').innerHTML=(`You ${playerMove} - ${computerMove} Computer`)
+
+document.querySelector(`.js-show-score`).innerHTML=(`Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`)
 }
 
 function createComputerMove () {
