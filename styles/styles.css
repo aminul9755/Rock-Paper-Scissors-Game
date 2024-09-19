@@ -25,3 +25,9 @@ body {
 .scissors-btn:hover {
   background-color: rgb(26, 28, 55);
 }
+
+.score-update {
+  font-size: 24px;
+  color: white;
+  margin-left: 50px;
+}

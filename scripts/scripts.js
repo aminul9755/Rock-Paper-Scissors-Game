@@ -1,4 +1,6 @@
 function playGame (playerMove) {
+  let computerMove = createComputerMove();
+  let result = '';
   if (playerMove === 'rock') {
     if (computerMove === 'rock') {
       result = 'Tie.';
@@ -24,6 +26,7 @@ function playGame (playerMove) {
       result = 'Tie.';
     }
   }
+  document.querySelector('.js-score-update').innerHTML=(`You ${playerMove} - ${computerMove} Computer`)
 }
 
 function createComputerMove () {
